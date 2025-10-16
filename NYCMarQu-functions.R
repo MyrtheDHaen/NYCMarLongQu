@@ -35,6 +35,12 @@ SplittingVector = function(data){
 
 #### Part II: Model fitting ----------------------------------------------------
 
+# Note: the code for the PWE estimator was mostly written by Alvaro Flórez in
+# the context of the paper
+# Verhasselt, Flórez, Molenberghs, and Van Keilegom (2025) - Copula-based
+# pairwise estimator for quantile regression with hierarchical missing data.
+# Statistical Modelling, 25(2):129-149.
+
 ### Function for the pairwise estimator (Gaussian copula) ...
 pwe.ALDcop.parallel = function(ID,X,y,tau=0.5,EPS=0.05,parm.ini=NULL,
                                weighted=F,weights=NULL,Rstr='AR',mtimes=NULL,
@@ -2738,5 +2744,6 @@ get_panels_EQCC_class <- function(data_sub, y_var_name, y_label,
   
   return(plot_panels)
 }
+
 
 # ------------------------------------------------------------------------------
