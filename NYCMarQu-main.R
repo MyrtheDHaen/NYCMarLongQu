@@ -103,6 +103,13 @@ NYC.noDM <- NYC.long[!(NYC.long$dis == 42.195),] # omit MAR point
 
 ##### Part 2: Copula-based PWE #################################################
 
+# Note: the code for the PWE estimator was mostly written by Alvaro Flórez in
+# the context of the paper
+# Verhasselt, Flórez, Molenberghs, and Van Keilegom (2025) - Copula-based
+# pairwise estimator for quantile regression with hierarchical missing data.
+# Statistical Modelling, 25(2):129-149.
+
+
 # For each variable, we fit the two PWE model options described in the paper:
 #   option 1 = unstructured model (UM)
 #   option 2 = cubic model (CM)
@@ -2927,6 +2934,7 @@ ggsave(path = class.dir, filename = paste0("EMQC_class_F_all.png"),
 
 
 ################################################################################
+
 
 
 
